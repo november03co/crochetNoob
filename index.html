@@ -10,30 +10,384 @@
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="semantic/packaged/css/semantic.css">
+  <link rel="stylesheet" type="text/css" href="spectrum/spectrum.css">
   <link rel="stylesheet" type="text/css" href="index.css">
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
     <script src="semantic/packaged/javascript/semantic.js"></script>
+    <script src="spectrum/spectrum.js"></script>
   <script src="index.js"></script>
+  
+	<style id="mainColorStyle">
+		.st {
+			background-color:#fff;	
+		}
+	</style>
+	<style id="otherColorStyle">
+		.st.color {
+			background-color:#800080;	
+		}
+	</style>
 </head>
 <body>
 	<p>This page helps you design your own tapestry design and you can follow it while you crochet. Just click on any squares to add color. Click it again to remove the color.</p>
+	
+	<p>If you want to print this pattern, remember to select "Print background image" in your printer settings OR you can screen capture this page.</p>
 	
     <div id="options">
         <!--<div class="ui buttons" id="size">
             <div class="ui active button" data-value="rectangle">Rectangle</div>
             <div class="ui button" data-value="circle">Circle</div>
         </div>-->
-        <div class="ui input">
-            <label>Number of stitches: </label><input type="numeric" id="numStitch" class="number" value="30" maxlength="3">
-        </div>
-        <div class="ui input">
-            <label>Number of rows: </label><input type="numeric" id="numRow" value="10" maxlength="2">
+        <div class="ui fluid form segment">
+        	<div class="two fields">
+        		<div class="field">
+					<label>Number of stitches: </label>
+					<div class="ui icon input">
+						<input type="numeric" id="numStitch" class="number" value="30" maxlength="3">
+						<i class="circular pencil icon" id="updateSt"></i>
+					</div>
+				</div>
+				<div class="field">
+					<label>Number of rows: </label>
+					<div class="ui icon input">
+					<input type="numeric" id="numRow" value="10" maxlength="2">
+					<i class="pencil icon" id="updateRow" ></i>
+					</div>
+				</div>
+        	</div>
+        	<div class="two fields">
+				<div class="inline field">
+					<label>Main stitch color: </label><input type="color" id="mainColor" class="color" value="#ffffff">
+				</div>
+				<div class="inline field">
+					<label>Other stitch color: </label><input type="color" id="otherColor" class="color" value="#800080">
+				</div>
+			</div>
         </div>
     </div>
     
-    <div id="tapestry">
-        
+    <div id="tapestry" data-row="10" data-col="30">
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
+        <div class="row">
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        	<div class="st"></div>
+        </div>
     </div>
 	
 	<div id="info"></div>

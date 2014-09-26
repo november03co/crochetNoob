@@ -1,3 +1,9 @@
+@media print {
+	p, #options {
+		display: none;
+	}
+}
+
 body {
  font-family: "Source Sans Pro";
 }
@@ -8,29 +14,21 @@ p, #options {
 }
 #tapestry {
     margin: 20px auto;
-    overflow: none;
+	width: 100%;
 	display: table;
+	border-spacing: 2px;
 }
 .row {
 	display: block;
 }
 .st{
-    display: inline-block;
-	min-width: 5px;
-	min-height: 5px;
+    display: table-cell;
     border: 1px solid #b3b3b3;
     /*margin: -1px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transform: rotate(20deg);*/
-    background-color:#fff;
-}
-.st.color{
-    background-color: purple;
 }
 .clear {
     clear: both;
-}
-#numStitch,#numRow{
-    width: 70px;
 }
