@@ -16,10 +16,11 @@ p, #options {
     margin: 20px auto;
 	width: 100%;
 	display: table;
+	border-collapse: collapse;
 	border-spacing: 2px;
 }
 .row {
-	display: block;
+	display: table-row;
 }
 .st{
     display: table-cell;
