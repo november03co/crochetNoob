@@ -4,16 +4,6 @@ var cellWidth = 30,
     DEFAULTCOL = 30;
 
 var paintCanvas = function (col, row) {
-<<<<<<< HEAD
-   
-    for (var y = 0; y < row; y++) {
-		var $row = $("<div class='row'/>");
-		$row.appendTo("#tapestry");
-    	for (var x = 0; x < col; x++){
-     		$("<div class='st'/>").appendTo($row);   
-    	}
-    }
-=======
 	var currRow = parseInt($("#tapestry").data("row"), 10);
 	var currCol = parseInt($("#tapestry").data("col"), 10);
 	
@@ -49,8 +39,7 @@ var paintCanvas = function (col, row) {
 		}
 	}
 	$("#tapestry").data("row",row).data("col",col);
->>>>>>> gh-pages
-	
+
 	resizeCells(col);
 }
 
@@ -58,23 +47,15 @@ var resizeCells = function(col) {
 	//calculate each st div width
 	var w = $(window).width();
 	
-<<<<<<< HEAD
-	var stW = Math.floor(w/col)-2;
-=======
 	//find out how wide each stitch cell should be
 	var stW = Math.floor((w-10)/col)-4; //2 is the margin between each cell
->>>>>>> gh-pages
 	if (stW >= 50) {
 		stW = 50;	
 	}
 	$(".st").width(stW);
 	$(".st").height(stW);
 	
-<<<<<<< HEAD
-	$("#tapestry").width((stW+2)*col);
-=======
 	$("#tapestry").width((stW+4)*col);
->>>>>>> gh-pages
 }
 
 var validateNum = function(val){
@@ -90,12 +71,6 @@ var validateNum = function(val){
     return valid;
 }
 
-<<<<<<< HEAD
-$(function(){
-    
-    paintCanvas(DEFAULTCOL,DEFAULTROW);
-    
-=======
 var updateMainColor = function(color){
 $("#mainColorStyle").html($("#mainColorStyle").html().replace(/#[\da-f]{3,6}/ig, color));
 }
@@ -119,7 +94,6 @@ $(function(){
 		}
 	});
 	
->>>>>>> gh-pages
     $("#tapestry").on("click", ".st", function(){
         var $this = $(this);
         if ($this.hasClass("color")){
@@ -128,23 +102,8 @@ $(function(){
             $this.addClass("color");
         }
     });
-    
-<<<<<<< HEAD
-    $("#size").on("click",".button",function(){
-       var $this = $(this);
-        if ( $this.data("value") === "rectangle"){
-            
-        } else {
-            
-        }
-    });
-    
-    $("#numStitch,#numRow").keyup(function(){
-		$("#tapestry").html("");
-=======
+   
     $("#updateRow,#updateSt").click(function(){
->>>>>>> gh-pages
-        
 		var col = validateNum($("#numStitch").val());
         var row = validateNum($("#numRow").val());
         
@@ -155,8 +114,4 @@ $(function(){
 	$(window).on("resize", function(e){
 		resizeCells(validateNum($("#numStitch").val()));	
 	});
-<<<<<<< HEAD
-=======
-	
->>>>>>> gh-pages
 });
