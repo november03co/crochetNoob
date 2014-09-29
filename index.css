@@ -15,16 +15,14 @@ p, #options {
 #tapestry {
     margin: 20px auto;
 	width: 100%;
-	/*display: table;*/
+	display: table;*/
 	border-spacing: 2px;
 }
 .row {
-	/*display: table-row;*/
-	clear:both;
+	display: table-row;
 }
 .st{
-    /*display: table-cell;*/
-	float:left;
+    display: table-cell;
     border: 1px solid #b3b3b3;
     /*margin: -1px;
     border-bottom-left-radius: 20px;
