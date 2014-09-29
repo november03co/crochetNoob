@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+@media print {
+	p, #options {
+		display: none;
+	}
+}
+
+>>>>>>> gh-pages
 body {
  font-family: "Source Sans Pro";
 }
@@ -8,21 +17,32 @@ p, #options {
 }
 #tapestry {
     margin: 20px auto;
+<<<<<<< HEAD
     overflow: none;
 	display: table;
+=======
+	width: 100%;
+	display: table;
+	border-spacing: 2px;
+>>>>>>> gh-pages
 }
 .row {
 	display: block;
 }
 .st{
+<<<<<<< HEAD
     display: inline-block;
 	min-width: 5px;
 	min-height: 5px;
+=======
+    display: table-cell;
+>>>>>>> gh-pages
     border: 1px solid #b3b3b3;
     /*margin: -1px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transform: rotate(20deg);*/
+<<<<<<< HEAD
     background-color:#fff;
 }
 .st.color{
@@ -33,4 +53,9 @@ p, #options {
 }
 #numStitch,#numRow{
     width: 70px;
+=======
+}
+.clear {
+    clear: both;
+>>>>>>> gh-pages
 }
