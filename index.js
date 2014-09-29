@@ -39,7 +39,7 @@ var paintCanvas = function (col, row) {
 		}
 	}
 	$("#tapestry").data("row",row).data("col",col);
-	
+
 	resizeCells(col);
 }
 
@@ -102,9 +102,8 @@ $(function(){
             $this.addClass("color");
         }
     });
-    
+   
     $("#updateRow,#updateSt").click(function(){
-        
 		var col = validateNum($("#numStitch").val());
         var row = validateNum($("#numRow").val());
         
@@ -115,5 +114,4 @@ $(function(){
 	$(window).on("resize", function(e){
 		resizeCells(validateNum($("#numStitch").val()));	
 	});
-	
 });
