@@ -13,7 +13,7 @@ var paintCanvas = function (col, row) {
 			var $row = $("<div class='row'/>");
 			$row.appendTo("#tapestry");
     		for (var x = 0; x < col; x++){
-     			$("<div class='st'/>").appendTo($row);   
+     			$("<div class='st'><div/></div>").appendTo($row);   
     		}
     	}
 	} else if (row < currRow) {
@@ -78,6 +78,12 @@ var updateOtherColor = function(color){
 	$("#otherColorStyle").html($("#otherColorStyle").html().replace(/#[\da-f]{3,6}/ig, color));
 }
 
+var updateTapestrySize = function(){
+	var col = validateNum($("#numStitch").val());
+    var row = validateNum($("#numRow").val());
+    
+    paintCanvas(col, row);	
+}
 
 $(function(){
     
@@ -104,10 +110,10 @@ $(function(){
     });
    
     $("#updateRow,#updateSt").click(function(){
-		var col = validateNum($("#numStitch").val());
-        var row = validateNum($("#numRow").val());
-        
-        paintCanvas(col, row);
+		updateTapestrySize();
+    });
+	$("#numStitch,#numRow").on("blur change", function(){
+		updateTapestrySize();
     });
 	
 	//adjust the cell size on window resize
