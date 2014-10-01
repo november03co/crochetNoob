@@ -52,8 +52,8 @@ var resizeCells = function(col) {
 	if (stW >= 50) {
 		stW = 50;	
 	}
-	$(".st").width(stW);
-	$(".st").height(stW);
+	$(".st").width(stW)
+				.height(stW);
 	
 	$("#tapestry").width((stW+4)*col);
 }
